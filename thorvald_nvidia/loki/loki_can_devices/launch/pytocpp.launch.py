@@ -15,8 +15,11 @@ def generate_launch_description():
     pycppnode = Node(
         package="loki_can_devices",
         executable="pytocpp",
+        remappings=[('cmd_vel', 'twist_mux/cmd_vel'),
+                    ('joint_states', "base_driver/joint_states")],
         name="py_to_cpp",
-        parameters= [config]
+        parameters= [config],
+        output = 'screen'
     )
 
     ld.add_action(pycppnode)

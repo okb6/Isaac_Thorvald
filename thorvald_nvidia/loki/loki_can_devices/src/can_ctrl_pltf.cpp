@@ -24,6 +24,10 @@ CanCtrlPltf::~CanCtrlPltf()
     motor_controllers_.clear();   
 }
 
+bool
+CanCtrlPltf::init_can(){
+  return true;
+}
 
 void 
 CanCtrlPltf::evalCanBuffer(std::vector<CanFrame>& can_msgs_base,
@@ -185,12 +189,24 @@ CanCtrlPltf::initPltf(int can_interface_type, std::string can_interface_name,
                       std::vector<std::map<std::string, double> > battery_map,
                       std::vector<std::map<std::string, int> > io_map)
 {
-    if (can_interface_type == CAN_ITF_NONE)
-    {
-      std::cout << "Uses NO CAN adapter" << std::endl;
-      can_line_ = new CanLineDummy;
-    }
-    else if (can_interface_type == CAN_ITF_SOCKETCAN)
+    // if (can_interface_type == CAN_ITF_NONE)
+    // {
+    //   std::cout << "Uses NO CAN adapter" << std::endl;
+    //   can_line_ = new CanLineDummy;
+    // }
+    // else if (can_interface_type == CAN_ITF_ENC_V1REV6)
+    // {
+    //   std::cout << "Uses Thorvald Main Enc. PCB for CAN on port: " << can_interface_name << std::endl;
+    //   can_line_ = new CanLineUSB;
+    //   ((::CanLineUSB*)can_line_)->setPort(can_interface_name);
+    // }
+    // else if(can_interface_type == CAN_ITF_ENC_V2REV1)
+    // {
+    //   std::cout << "Uses Thorvald Main PCB V2 for CAN on port: " << can_interface_name << std::endl;
+    //   can_line_ = new CanLineUSBv2;
+    //   ((::CanLineUSBv2*)can_line_)->setPort(can_interface_name);
+    // }
+    if (can_interface_type == CAN_ITF_SOCKETCAN)
     {
       std::cout << "Uses socketcan on interface: " << can_interface_name << std::endl;
       can_line_ = new CanLineSocketcan;
@@ -272,7 +288,7 @@ CanCtrlPltf::setupMotorController(int can_id, int setup_id, int setup_value)
   }
   else
   {
-    std::cout <<"Index %d is not in the range of motor_controllers_", index;
+    std::cout <<"Index is not in the range of motor_controllers_" << std::endl;
   }
 }
 
@@ -503,11 +519,11 @@ void
 CanCtrlPltf::getControllerSetupMap(int can_id, std::vector<std::string> &setup_map)
 {  
   int index = getMotorControllerIndex(can_id);
-  std::cout << "index: " << index << "\n\n\n\n\n\n\n" << std::endl;
+  std::cout << "index: " << index << std::endl;
   if (index >= 0 && index < motor_controllers_.size())
     setup_map = motor_controllers_[index]->getControllerSetupMap();
   else
-   std::cout <<"Index %d is not in the range of motor_controllers_ for map", index;  
+   std::cout <<"Index is not in the range of motor_controllers_ for map" <<std::endl;  
 }
 
 void

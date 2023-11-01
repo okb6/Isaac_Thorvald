@@ -6,6 +6,7 @@ from geometry_msgs.msg import Twist
 from std_msgs.msg import Bool
 from std_srvs.srv import Trigger, SetBool
 from rclpy.node import Node
+from loki_msgs.srv import HomeS
 import numpy
 
 class TeleopNode(Node):
@@ -35,7 +36,7 @@ class TeleopNode(Node):
         self.lock_pub = self.create_publisher(Bool, 'joy_priority', 1)
 
         #Clients
-        self.home_client = self.create_client(Trigger, 'home_steering')
+        self.home_client = self.create_client(HomeS, 'home_steering')
 
         #Services
         self.block_auto_mode_srv = self.create_service(SetBool, 'block_auto_mode', self.srv_Callback_Block_Auto)
@@ -187,11 +188,13 @@ class TeleopNode(Node):
 
         trigger_string_map = {'button_0':tb0, 'button_1':tb1, 'button_2':tb2, 'button_3':tb3, 'button_4':tb4, 'button_5':tb5, 'button_6':tb6}
         
-        for l in range(7):
+        l = 0
+        while l < 7:
             button = 'button_{}'.format(l)
             if not len(trigger_string_map[button]) == 0:
                 topic = trigger_string_map[button]
                 self.custom_trigger_map[button] = self.create_client(Trigger, topic)
+            l += 1
 
         
         #Get Gains
@@ -215,11 +218,13 @@ class TeleopNode(Node):
         buttoned = []
         thresh = 0.9
         i = 0
-        for i in range(len(axes_in)):
+        while i < len(axes_in):
             if axes_in[i] > thresh:
                 buttoned.append(1)
             else:
                 buttoned.append(0)
+
+            i += 1
         return buttoned
     
 
@@ -301,11 +306,18 @@ class TeleopNode(Node):
         self.buttons = []
         self.axes = []
 
+        self.buttons.clear()
+        self.axes.clear()
+
         self.buttons = joy.buttons
         self.axes = joy.axes
 
         int_axes = self.buttonifyAxes(self.axes)
-        self.buttons.extend(int_axes)
+        i = 0
+        while i < len(int_axes):
+            self.buttons.append(int_axes[i])
+            i += 1
+
         
         #get axes of intrest
         axis_v_primary = self.axes[self.axis_map['axis_vx']]
@@ -350,8 +362,9 @@ class TeleopNode(Node):
                         self.get_logger().info("callling service failed")
                 
         elif self.evaluateButtonPressCombo(self.home_buttons):
+            self.get_logger().info("calling homiing")
 
-            future = self.home_client.call_async(Trigger.Request())
+            future = self.home_client.call_async(HomeS.Request())
             rclpy.spin_until_future_complete(self, future)
             response = future.result()
             self.get_logger().info("calling service: home_steering")
@@ -365,14 +378,17 @@ class TeleopNode(Node):
         #MODES OF TURNING#
         ##################
 
-        if self.axes[self.axis_map["axis_turn_left"]] < self.turning_limit or self.axes[self.axis_map["axis_turn_right"]] < self.turning_limit and self.buttons[self.button_map[self.button_turning_safety]] and self.turning_buttons_initiated:
-            mode = self.Mode_Turning
+        if self.axes[self.axis_map["axis_turn_left"]] < self.turning_limit or self.axes[self.axis_map["axis_turn_right"]] < self.turning_limit:
+            if self.buttons[self.button_map[self.button_turning_safety]] and self.turning_buttons_initiated:
+                mode = self.Mode_Turning
+                # self.get_logger().info("MODE TURNING")
         elif abs(axis_v_primary) > self.deadzone and self.previous_drive_mode == self.Mode_Turning:
             mode = self.previous_non_turn_mode
         elif self.evaluateButtonPressCombo(self.mode_forward_buttons):
             mode = self.Mode_Forward
             self.previous_non_turn_mode = self.Mode_Forward
         elif self.evaluateButtonPressCombo(self.mode_left_buttons):
+            # self.get_logger().info("mode_left")
             mode = self.Mode_Left
             self.previous_non_turn_mode = self.Mode_Left
         elif self.evaluateButtonPressCombo(self.omni_buttons):
@@ -399,13 +415,13 @@ class TeleopNode(Node):
         ###CALCULATE COMANDS###
         #######################
 
-
         if mode == self.Mode_Turning:
             vx = 0.0
             vy = 0.0
             
             if self.buttons[self.button_map[self.button_turning_safety]]:
-                wz = (0.5 - 0.5 * self.axes[self.axis_map["axis_turn_left"]]) - (0.5 - 0.5 * self.axes[self.axis_map["axis_turn_right"]])
+                wz = (0.5 - (0.5 * self.axes[self.axis_map["axis_turn_left"]])) - (0.5 - (0.5 * self.axes[self.axis_map["axis_turn_right"]]))
+                wz = wz * self.kv
             else:
                 wz = 0
             
@@ -416,20 +432,22 @@ class TeleopNode(Node):
             if axis_v_primary > -self.deadzone and axis_v_primary < self.deadzone:
                 axis_v_primary = 0.0
             
-            axis_v_primary *= self.kv
-            axis_v_secondary *= self.kv
+            axis_v_primary = numpy.array(axis_v_primary) * self.kv
+            axis_v_secondary = numpy.array(axis_v_secondary) * self.kv
 
             if axis_wz > -self.deadzone and axis_wz < self.deadzone:
                 wz = 0.0
             elif axis_wz > 0:
-                ang = self.a * self.axis_wz + self.b
-                self.get_logger().info('{}'.format(ang))
+                ang = (self.a * axis_wz + self.b)
+                # self.get_logger().info('{}'.format(ang))
                 radius = self.turn_calc_1 / (math.tan(ang)) + self.turn_calc_w
-                wz = axis_v_primary / radius
+                wz = (axis_v_primary / radius)
+                # self.get_logger().info("radius 1:{}".format(radius))
             else:
                 ang = (self.a * axis_wz - self.b)
                 radius = self.turn_calc_1 / (math.tan(ang)) - self.turn_calc_w
-                wz = axis_v_primary / radius
+                wz = (axis_v_primary / radius)
+                # self.get_logger().info("radius 2:{}".format(radius))
             
             if mode == self.Mode_Forward:
                 vx = axis_v_primary
@@ -459,13 +477,17 @@ class TeleopNode(Node):
         twist_msg.angular.y = 0.0
         twist_msg.angular.z = wz
 
+        # self.get_logger().info("vx{}, vy{}, wz{}".format(vx, vy, wz))
+
         if self.teleop_lock_on:
             self.twist_pub.publish(twist_msg)
         
         self.previous_drive_mode = mode
 
-        for i in range(self.number_of_buttons):
+        i = 0
+        while i < self.number_of_buttons:
             self.previous_buttons[i]= self.buttons[i]
+            i += 1
 
 
 
