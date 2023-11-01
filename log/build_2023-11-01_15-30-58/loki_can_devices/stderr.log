@@ -1,0 +1,266 @@
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_io_v1pcb.cpp:[m[K In member function ‘[01m[Kvirtual bool V1PCB::initIO(std::map<std::__cxx11::basic_string<char>, int>, std::vector<CanFrame>&)[m[K’:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_io_v1pcb.cpp:85:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+   85 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_io_v1uv.cpp:[m[K In member function ‘[01m[Kvirtual bool V1UV::initIO(std::map<std::__cxx11::basic_string<char>, int>, std::vector<CanFrame>&)[m[K’:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_io_v1uv.cpp:80:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+   80 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/RoboteqFbl2360Diff.cpp:[m[K In member function ‘[01m[Kvirtual bool RoboteqFbl2360Diff::sendDriveCommand(std::vector<CanFrame>&, int, double, double, double, bool)[m[K’:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/RoboteqFbl2360Diff.cpp:540:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+  540 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_line_socketcan.h:23[m[K,
+                 from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_line_socketcan.cpp:1[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:52:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[KCAN_ITF_SOCKETCAN[m[K’
+   52 |     [01;31m[KCAN_ITF_SOCKETCAN[m[K
+      |     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:50:3:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   50 |   [01;36m[K{[m[K
+      |   [01;36m[K^[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:52:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   52 |     [01;31m[KCAN_ITF_SOCKETCAN[m[K
+      |     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                      [32m[K;[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:200:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprotected[m[K’
+  200 | [01;31m[Kprotected[m[K:
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_line_socketcan.h:23[m[K,
+                 from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_line_socketcan.cpp:1[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:237:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  237 | [01;31m[K}[m[K;
+      | [01;31m[K^[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_line_socketcan.cpp:[m[K In member function ‘[01m[Kbool CanLineSocketcan::initialize(std::string)[m[K’:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_line_socketcan.cpp:33:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+   33 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_line_socketcan.cpp:[m[K In member function ‘[01m[Kbool CanLineSocketcan::writeMsg(CanFrame)[m[K’:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_line_socketcan.cpp:140:34:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Kcan_frame_wr.CanFrame::getId()[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kcanid_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  140 |      .can_id = [01;35m[Kcan_frame_wr.getId()[m[K,
+      |                [01;35m[K~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_line_socketcan.cpp:141:39:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Kcan_frame_wr.CanFrame::getLength()[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[K__u8[m[K’ {aka ‘[01m[Kunsigned char[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  141 |      .can_dlc = [01;35m[Kcan_frame_wr.getLength()[m[K,
+      |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:52:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[KCAN_ITF_SOCKETCAN[m[K’
+   52 |     [01;31m[KCAN_ITF_SOCKETCAN[m[K
+      |     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:50:3:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   50 |   [01;36m[K{[m[K
+      |   [01;36m[K^[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:52:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   52 |     [01;31m[KCAN_ITF_SOCKETCAN[m[K
+      |     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                      [32m[K;[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:200:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprotected[m[K’
+  200 | [01;31m[Kprotected[m[K:
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:237:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  237 | [01;31m[K}[m[K;
+      | [01;31m[K^[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:28:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool CanCtrlPltf::init_can()[m[K’
+   28 | [01;31m[KCanCtrlPltf[m[K::init_can(){
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:28:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kbool CanCtrlPltf::init_can()[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:33:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::evalCanBuffer(std::vector<CanFrame>&, std::vector<CanFrame>&)[m[K’
+   33 | [01;31m[KCanCtrlPltf[m[K::evalCanBuffer(std::vector<CanFrame>& can_msgs_base,
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:33:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::evalCanBuffer(std::vector<CanFrame>&, std::vector<CanFrame>&)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:71:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::initMotorDrives(std::vector<std::map<std::__cxx11::basic_string<char>, double> >)[m[K’
+   71 | [01;31m[KCanCtrlPltf[m[K::initMotorDrives(std::vector<std::map<std::string, double> >  motor_drives)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:71:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::initMotorDrives(std::vector<std::map<std::__cxx11::basic_string<char>, double> >)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:118:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::initBatteries(std::vector<std::map<std::__cxx11::basic_string<char>, double> >)[m[K’
+  118 | [01;31m[KCanCtrlPltf[m[K::initBatteries(std::vector<std::map<std::string, double> >  batteries)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:118:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::initBatteries(std::vector<std::map<std::__cxx11::basic_string<char>, double> >)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:156:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::initIOs(std::vector<std::map<std::__cxx11::basic_string<char>, int> >)[m[K’
+  156 | [01;31m[KCanCtrlPltf[m[K::initIOs(std::vector<std::map<std::string, int> >  io_map)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:156:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::initIOs(std::vector<std::map<std::__cxx11::basic_string<char>, int> >)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:187:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool CanCtrlPltf::initPltf(int, std::string, std::vector<std::map<std::__cxx11::basic_string<char>, double> >, std::vector<std::map<std::__cxx11::basic_string<char>, double> >, std::vector<std::map<std::__cxx11::basic_string<char>, int> >)[m[K’
+  187 | [01;31m[KCanCtrlPltf[m[K::initPltf(int can_interface_type, std::string can_interface_name,
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:187:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kbool CanCtrlPltf::initPltf(int, std::string, std::vector<std::map<std::__cxx11::basic_string<char>, double> >, std::vector<std::map<std::__cxx11::basic_string<char>, double> >, std::vector<std::map<std::__cxx11::basic_string<char>, int> >)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:238:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::setParams(std::vector<std::map<std::__cxx11::basic_string<char>, double> >)[m[K’
+  238 | [01;31m[KCanCtrlPltf[m[K::setParams(std::vector<std::map<std::string, double> > motor_drives)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:238:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::setParams(std::vector<std::map<std::__cxx11::basic_string<char>, double> >)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:251:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::setDriveParams(int, std::map<std::__cxx11::basic_string<char>, double>)[m[K’
+  251 | [01;31m[KCanCtrlPltf[m[K::setDriveParams(int node_id, std::map<std::string, double> params)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:251:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::setDriveParams(int, std::map<std::__cxx11::basic_string<char>, double>)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:267:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kint CanCtrlPltf::getMotorControllerIndex(int)[m[K’
+  267 | [01;31m[KCanCtrlPltf[m[K::getMotorControllerIndex(int can_id) //Start here
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:267:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kint CanCtrlPltf::getMotorControllerIndex(int)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:280:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::setupMotorController(int, int, int)[m[K’
+  280 | [01;31m[KCanCtrlPltf[m[K::setupMotorController(int can_id, int setup_id, int setup_value)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:280:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::setupMotorController(int, int, int)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:297:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::sendCommandsToAllDrives(BaseState)[m[K’
+  297 | [01;31m[KCanCtrlPltf[m[K::sendCommandsToAllDrives(BaseState commands)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:297:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::sendCommandsToAllDrives(BaseState)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:326:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kint CanCtrlPltf::sendDeviceCommand(CanFrame)[m[K’
+  326 | [01;31m[KCanCtrlPltf[m[K::sendDeviceCommand(CanFrame can_frame)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:326:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kint CanCtrlPltf::sendDeviceCommand(CanFrame)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:350:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::simulateAllDrives(BaseState)[m[K’
+  350 | [01;31m[KCanCtrlPltf[m[K::simulateAllDrives(BaseState commands)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:350:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::simulateAllDrives(BaseState)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:361:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kint CanCtrlPltf::setCommand(int, int, double, double, double)[m[K’
+  361 | [01;31m[KCanCtrlPltf[m[K::setCommand(int drive_index, int node_id, double speed, double position, double position_max_speed)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:361:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kint CanCtrlPltf::setCommand(int, int, double, double, double)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:370:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::setCurrentPosAsZeroAll()[m[K’
+  370 | [01;31m[KCanCtrlPltf[m[K::setCurrentPosAsZeroAll()
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:370:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::setCurrentPosAsZeroAll()[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:381:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::setCurrentPosAsZero(int)[m[K’
+  381 | [01;31m[KCanCtrlPltf[m[K::setCurrentPosAsZero(int can_id)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:381:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::setCurrentPosAsZero(int)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:394:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool CanCtrlPltf::homeSteeringAll()[m[K’
+  394 | [01;31m[KCanCtrlPltf[m[K::homeSteeringAll() // TODO: Check with Lars: elem->homeSteering() always returns true, can we make them void?
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:394:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kbool CanCtrlPltf::homeSteeringAll()[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:427:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::getAllBatteryVars(std::vector<CanBatteryItf::BatteryVars>&)[m[K’
+  427 | [01;31m[KCanCtrlPltf[m[K::getAllBatteryVars(std::vector<CanBatteryItf::BatteryVars>& batt_array_in) // TODO: Check with Lars: Unused function
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:427:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::getAllBatteryVars(std::vector<CanBatteryItf::BatteryVars>&)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:438:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::getSetBoolServices(std::map<int, std::__cxx11::basic_string<char> >&)[m[K’
+  438 | [01;31m[KCanCtrlPltf[m[K::getSetBoolServices(std::map<int, std::string> &set_bool_map)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:438:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::getSetBoolServices(std::map<int, std::__cxx11::basic_string<char> >&)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:463:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::callSetBoolService(int, bool, bool&, std::string&)[m[K’
+  463 | [01;31m[KCanCtrlPltf[m[K::callSetBoolService(int unique_service_id, bool value, bool &success, std::string &message)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:463:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::callSetBoolService(int, bool, bool&, std::string&)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:475:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kint CanCtrlPltf::getMotorControllerCanId(int)[m[K’
+  475 | [01;31m[KCanCtrlPltf[m[K::getMotorControllerCanId(int index)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:475:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kint CanCtrlPltf::getMotorControllerCanId(int)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:482:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::getControllerArray(std::vector<CanDriveItf::ControllerVars>&)[m[K’
+  482 | [01;31m[KCanCtrlPltf[m[K::getControllerArray(std::vector<CanDriveItf::ControllerVars>& controller_vars_out)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:482:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::getControllerArray(std::vector<CanDriveItf::ControllerVars>&)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:500:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::getBaseState(BaseState&)[m[K’
+  500 | [01;31m[KCanCtrlPltf[m[K::getBaseState(BaseState& base_state)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:500:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::getBaseState(BaseState&)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:519:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::getControllerSetupMap(int, std::vector<std::__cxx11::basic_string<char> >&)[m[K’
+  519 | [01;31m[KCanCtrlPltf[m[K::getControllerSetupMap(int can_id, std::vector<std::string> &setup_map)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:519:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::getControllerSetupMap(int, std::vector<std::__cxx11::basic_string<char> >&)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:530:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CanCtrlPltf::getIOStates(std::vector<CanIOItf::IOState>&)[m[K’
+  530 | [01;31m[KCanCtrlPltf[m[K::getIOStates(std::vector<CanIOItf::IOState> &io_states)
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:530:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CanCtrlPltf::getIOStates(std::vector<CanIOItf::IOState>&)[m[K’
+In file included from [01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/src/can_ctrl_pltf.cpp:5[m[K:
+[01m[K/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:34:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CanCtrlPltf[m[K’ defined here
+   34 | class [01;36m[KCanCtrlPltf[m[K // : public CanCtrlPltfItf
+      |       [01;36m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/can.dir/build.make:160: CMakeFiles/can.dir/src/can_line_socketcan.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/can.dir/build.make:174: CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/can.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

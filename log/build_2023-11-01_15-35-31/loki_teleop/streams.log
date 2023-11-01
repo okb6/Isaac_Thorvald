@@ -1,0 +1,34 @@
+[0.890s] Invoking command in '/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_teleop': PYTHONPATH=/home/cairlab/Documents/GitHub/Isaac_Thorvald/build/loki_teleop/prefix_override:/home/cairlab/Documents/GitHub/Isaac_Thorvald/install/loki_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/loki_teleop build --build-base /home/cairlab/Documents/GitHub/Isaac_Thorvald/build/loki_teleop/build install --record /home/cairlab/Documents/GitHub/Isaac_Thorvald/build/loki_teleop/install.log --single-version-externally-managed
+[1.073s] running egg_info
+[1.086s] writing ../../../build/loki_teleop/loki_teleop.egg-info/PKG-INFO
+[1.086s] writing dependency_links to ../../../build/loki_teleop/loki_teleop.egg-info/dependency_links.txt
+[1.086s] writing entry points to ../../../build/loki_teleop/loki_teleop.egg-info/entry_points.txt
+[1.086s] writing requirements to ../../../build/loki_teleop/loki_teleop.egg-info/requires.txt
+[1.087s] writing top-level names to ../../../build/loki_teleop/loki_teleop.egg-info/top_level.txt
+[1.114s] reading manifest file '../../../build/loki_teleop/loki_teleop.egg-info/SOURCES.txt'
+[1.114s] writing manifest file '../../../build/loki_teleop/loki_teleop.egg-info/SOURCES.txt'
+[1.115s] running build
+[1.115s] running build_py
+[1.115s] running install
+[1.115s] /home/cairlab/.local/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[1.115s] !!
+[1.115s] 
+[1.116s]         ********************************************************************************
+[1.116s]         Please avoid running ``setup.py`` directly.
+[1.116s]         Instead, use pypa/build, pypa/installer or other
+[1.116s]         standards-based tools.
+[1.116s] 
+[1.116s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[1.116s]         ********************************************************************************
+[1.116s] 
+[1.116s] !!
+[1.116s]   self.initialize_options()
+[1.120s] running install_lib
+[1.133s] running install_data
+[1.151s] running install_egg_info
+[1.166s] removing '/home/cairlab/Documents/GitHub/Isaac_Thorvald/install/loki_teleop/lib/python3.10/site-packages/loki_teleop-2.0.0-py3.10.egg-info' (and everything under it)
+[1.166s] Copying ../../../build/loki_teleop/loki_teleop.egg-info to /home/cairlab/Documents/GitHub/Isaac_Thorvald/install/loki_teleop/lib/python3.10/site-packages/loki_teleop-2.0.0-py3.10.egg-info
+[1.167s] running install_scripts
+[1.306s] Installing teleop_node script to /home/cairlab/Documents/GitHub/Isaac_Thorvald/install/loki_teleop/lib/loki_teleop
+[1.306s] writing list of installed files to '/home/cairlab/Documents/GitHub/Isaac_Thorvald/build/loki_teleop/install.log'
+[1.326s] Invoked command in '/home/cairlab/Documents/GitHub/Isaac_Thorvald/thorvald_nvidia/loki/loki_teleop' returned '0': PYTHONPATH=/home/cairlab/Documents/GitHub/Isaac_Thorvald/build/loki_teleop/prefix_override:/home/cairlab/Documents/GitHub/Isaac_Thorvald/install/loki_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/loki_teleop build --build-base /home/cairlab/Documents/GitHub/Isaac_Thorvald/build/loki_teleop/build install --record /home/cairlab/Documents/GitHub/Isaac_Thorvald/build/loki_teleop/install.log --single-version-externally-managed
