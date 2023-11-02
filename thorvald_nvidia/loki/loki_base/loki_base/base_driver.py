@@ -3,18 +3,15 @@ from rclpy.node import Node
 from rclpy.time import Time
 from rclpy.duration import Duration
 from geometry_msgs.msg import Twist
-from loki_msgs.msg import BaseState, ControllerArray, BatteryArray, IOArray, CANFrame
-from sensor_msgs.msg import JointState, Imu
+from loki_msgs.msg import BaseState, ControllerArray, BatteryArray, IOArray
+from sensor_msgs.msg import JointState
 from nav_msgs.msg import Odometry
-from std_msgs.msg import Int32
 from std_srvs.srv import SetBool, Trigger
 from loki_msgs.srv import MotorControllerSetup, CanID, DriveParams, InitPltf, GetSetBool, EvalCanBuffer, StateBase, ContArray, BatteryVars, StatesOfIO, DriveCmds, DeviceCmds, SimDrive, PosZeroAll, PosZero, HomesteeringAll, CotMap, MotCot, SetBools, Params, HomeS
 # from tf2 import transform_broadcaster, transform_datatypes
 from loki_base.pltf_clc_std import PltfClcStd
 import numpy as np
 from loki_base.Py_Base_State import PyBaseState
-from loki_base.canframe import canframe
-import numpy
 
 class BaseDriver(Node):
 
@@ -376,6 +373,7 @@ class BaseDriver(Node):
         latest_base_command_msg = BaseState()
         self.baseStateToMsg(self.latest_base_command_time, self.latest_base_command, latest_base_command_msg)
         self.bsmg = latest_base_command_msg
+        self.get_logger().info("{}".format(latest_base_command_msg))
         self.joint_command_pub.publish(latest_base_command_msg)
 
     def client_get_base_state(self):
@@ -443,13 +441,13 @@ class BaseDriver(Node):
         #Joint State
         joint_state_msg = JointState()
         joint_state_msg.header.stamp = self.get_clock().now().to_msg()
-        joint_state_msg.name = self.joint_names
 
         i = 0
 
         while i < len(base_state.steer_pos):
+            joint_state_msg.name.append(self.joint_names[i])
             joint_state_msg.position.append(base_state.steer_pos[i])
-            joint_state_msg.position.append(base_state.prop_pos[i])
+            joint_state_msg.velocity.append(base_state.prop_speed[i])
             i += 1
         
         self.joint_state_pub.publish(joint_state_msg)
@@ -535,6 +533,7 @@ class BaseDriver(Node):
     def client_simulate_All_Drives(self):
         simcommand = BaseState()
         self.baseStateToMsg(self.latest_base_command_time, self.latest_base_command, simcommand)
+        # self.get_logger().info("simcommand{}".format(simcommand))
         self.sim_command_msg.publish(simcommand)
         SimDrive.Request().commands = 1
         Future = self.cli_sim_drive.call_async(SimDrive.Request())
@@ -694,29 +693,7 @@ class BaseDriver(Node):
         
         response.success = True
         response.message = message
-
-    
-    # def srv_callback_io_set_bool(self, request, response, unique_service_id):
-    #     success = True
-    #     message = ''
-    #     data = request.data
-
-    #     boolservice = self.client_call_set_bool_service(unique_service_id, data, success, message)
-    #     response.success = boolservice.success
-    #     response.message = boolservice.message
-    #     self.get_logger().info(message)
-    
-    # def client_call_set_bool_service(self, unique_service_id, data, success, message):
-    #     SetBools.Request().unique_service_id = unique_service_id
-    #     SetBools.Request().value = data
-    #     SetBools.Request().data = success
-    #     SetBools.Request().data = message
-    #     Future = self.cli_call_set_bool.call_async(SetBools.Request())
-    #     rclpy.spin_until_future_complete(self, Future)
-    #     response = Future.result()
-    #     return response
-
-        
+       
 
     def baseStateToMsg(self, time, base_state_in, base_state_out):
         base_state_out.header.stamp = time.to_msg()
