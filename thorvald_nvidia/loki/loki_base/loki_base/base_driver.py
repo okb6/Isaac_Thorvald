@@ -3,7 +3,7 @@ from rclpy.node import Node
 from rclpy.time import Time
 from rclpy.duration import Duration
 from geometry_msgs.msg import Twist
-from loki_msgs.msg import BaseState, ControllerArray, BatteryArray, IOArray
+from loki_msgs.msg import BaseState, ControllerArray, BatteryArray, IOArray, DriveInverted
 from sensor_msgs.msg import JointState
 from nav_msgs.msg import Odometry
 from std_srvs.srv import SetBool, Trigger
@@ -26,6 +26,7 @@ class BaseDriver(Node):
         self.emergency_stop = False
         self.latest_base_command_time = self.get_clock().now()
         self.command_timeout_time = Duration(seconds = 0.5)
+        self.drive_inverted = False
 
         # PltfClcStd = PltfClcStd()
 
@@ -82,10 +83,10 @@ class BaseDriver(Node):
             xmd = self.get_parameter(getx).value
             ymd = self.get_parameter(gety).value
 
-            steering_name = "steering{}".format(i)
+            steering_name = "a_steering{}".format(i)
             self.joint_names.append(steering_name)
 
-            wheel_name = "wheel{}".format(i)
+            wheel_name = "a_wheel{}".format(i)
             self.joint_names.append(wheel_name)
 
             if i == 0:
@@ -196,6 +197,7 @@ class BaseDriver(Node):
         self.io_pub = self.create_publisher(IOArray, 'io_data', 1)
         self.base_command_msg = self.create_publisher(BaseState, 'BasePub', 100)
         self.sim_command_msg = self.create_publisher(BaseState, 'simbasestate', 100)
+        self.drive_inverted_pub = self.create_publisher(DriveInverted, "drive_inverted", 1)
 
 
         #Services
@@ -304,7 +306,7 @@ class BaseDriver(Node):
         motor_drives = self.motor_drives
 
         PltfClcStd.initialize(PltfClcStd, self, motor_drives)
-        PltfClcStd.calc_commands(PltfClcStd, 0,0,0, self.motor_drives, self.latest_base_command)
+        PltfClcStd.calc_commands(PltfClcStd, 0,0,0, self.motor_drives, self.latest_base_command, self.drive_inverted)
 
         return success
     
@@ -373,7 +375,7 @@ class BaseDriver(Node):
         latest_base_command_msg = BaseState()
         self.baseStateToMsg(self.latest_base_command_time, self.latest_base_command, latest_base_command_msg)
         self.bsmg = latest_base_command_msg
-        self.get_logger().info("{}".format(latest_base_command_msg))
+        # self.get_logger().info("{}".format(latest_base_command_msg))
         self.joint_command_pub.publish(latest_base_command_msg)
 
     def client_get_base_state(self):
@@ -443,11 +445,17 @@ class BaseDriver(Node):
         joint_state_msg.header.stamp = self.get_clock().now().to_msg()
 
         i = 0
+        j = 0
 
-        while i < len(base_state.steer_pos):
+        while i < 8:
             joint_state_msg.name.append(self.joint_names[i])
-            joint_state_msg.position.append(base_state.steer_pos[i])
-            joint_state_msg.velocity.append(base_state.prop_speed[i])
+            if (i % 2) == 0:
+                joint_state_msg.position.append(base_state.steer_pos[j])
+                joint_state_msg.velocity.append(0.0)
+            else:
+                joint_state_msg.velocity.append(base_state.prop_speed[j])
+                joint_state_msg.position.append(0.0)
+                j += 1
             i += 1
         
         self.joint_state_pub.publish(joint_state_msg)
@@ -478,7 +486,15 @@ class BaseDriver(Node):
     
     def twist_callback(self,twist_in):
         self.latest_base_command_time = self.get_clock().now()
-        self.latest_base_command = PltfClcStd.calc_commands(PltfClcStd, twist_in.linear.x, twist_in.linear.y, twist_in.angular.z, self.motor_drives, self.latest_base_command)
+        if not (twist_in.linear.x < 0 and twist_in.angular.z < 0):
+            if twist_in.linear.x < 0 or twist_in.angular.z < 0:
+                self.drive_inverted = True
+            else:
+                self.drive_inverted = False
+
+        self.latest_base_command = PltfClcStd.calc_commands(PltfClcStd, twist_in.linear.x, twist_in.linear.y, twist_in.angular.z, self.motor_drives, self.latest_base_command, self.drive_inverted)
+
+
         # if not twist_in.angular.z == 0:
             # self.get_logger().info("motors help {}".format(self.latest_base_command.steer_pos))
 
