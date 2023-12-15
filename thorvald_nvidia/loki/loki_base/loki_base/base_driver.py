@@ -491,6 +491,8 @@ class BaseDriver(Node):
                 self.drive_inverted = True
             else:
                 self.drive_inverted = False
+        else:
+            self.drive_inverted = False
 
         self.latest_base_command = PltfClcStd.calc_commands(PltfClcStd, twist_in.linear.x, twist_in.linear.y, twist_in.angular.z, self.motor_drives, self.latest_base_command, self.drive_inverted)
 

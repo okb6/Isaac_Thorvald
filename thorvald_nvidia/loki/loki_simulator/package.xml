@@ -10,10 +10,7 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <exec_depend>loki_base</exec_depend>
-  <exec_depend>loki_gazebo_plugins</exec_depend>
 
-  <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- You can specify that this package is a metapackage here: -->
     <build_type>ament_cmake</build_type>
